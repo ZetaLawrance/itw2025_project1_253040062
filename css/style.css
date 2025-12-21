@@ -95,6 +95,7 @@ nav ul li a.active::after {
     height: 20px;
     justify-content: space-between;
     position: relative;
+    
 }
 
 .menu-toggle input {
@@ -512,8 +513,12 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
     nav {
         padding: 40px;
+        width: 100%;
     }
     .menu-toggle {
         display: flex;
@@ -546,6 +551,9 @@ section {
     }
     .hero-content h3 {
         font-size: 3rem;
+    }
+    .hero .btn-group {
+        justify-content: center;
     }
     .hero-img img {
         width: 70vw;
