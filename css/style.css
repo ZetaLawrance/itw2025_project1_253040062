@@ -62,6 +62,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--main);
+    transform: translate;
 }
 
 nav ul li a::after {        
@@ -299,7 +300,7 @@ section {
 
 .skill-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -359,7 +360,7 @@ section {
 
 .projects-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     place-items: center;
     gap: 3rem;
     row-gap: 5rem;
@@ -457,7 +458,7 @@ section {
     font-size: 16px;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     nav {
         padding: 25px;
     }
@@ -566,5 +567,171 @@ section {
     }
     .projects-box {
         grid-template-columns: 1fr;
+    }
+} */
+
+/* Ukuran Tablet Besar */
+@media screen and (max-width: 1024px){
+    html {
+        overflow-x: hidden;
+    }
+        .hero {
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+    .hero-content {
+        text-align: center;
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+    .hero-content h3 {
+        font-size: 3rem;
+    }
+    .hero .btn-group {
+        justify-content: center;
+    }
+    .hero-img img {
+        width: 70vw;
+    }
+    .about {
+        flex-direction: column-reverse;
+        gap: 5rem;
+        text-align: center;
+    }
+    .about h3 {
+        text-align: center;
+    }
+    .about h1 {
+        text-align: center;
+        font-size: 5rem
+    }
+    .about p {
+        text-align: center;
+    }
+    .about-img img {
+        width: 50vw;
+    }
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+    .skill i {
+        top: 0;
+        margin-top: 255px;
+        margin-left: -12px;
+    }
+    .projects-box {
+        grid-template-columns: 1fr;
+    }
+    .projects-card  {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5rem;
+        height: 830px;
+    }
+    .projects-card img {
+        max-width: 552px;
+    }
+    .projects .text {
+        margin-right: 3rem;
+        text-align: center;
+    }
+    .contact form {
+        flex-direction: column;
+    }
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    html {
+        overflow-x: hidden;
+    }
+    nav {
+        padding: 40px;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        background-color: var(--background);
+        transform: translateX(100%);
+        transition: all 0.8s;
+        border-left: 3px var(--text) solid;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    .skill i {
+        top: 0;
+        margin-top: 230px;
+        margin-left: -12px;
+    }
+    .projects-card  {
+        flex-direction: column;
+        padding: 5rem;
+        height: 830px;
+        margin-left: -1.5rem;
+    }
+    .projects-card img {
+        max-width: 550px;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px){
+    html {
+        overflow-x: hidden;
+    }
+    nav {
+        padding: 40px;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        background-color: var(--background);
+        transform: translateX(100%);
+        transition: all 0.8s;
+        border-left: 3px var(--text) solid;
+    }
+    nav ul.slide {
+        transform: translateX(0);
+    }
+    .skill i {
+        top: 0;
+        margin-top: 122px;
+        margin-left: -12px;
+    }
+    .projects-card  {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem;
+        margin-left: -1.5rem;
+    }
+    .projects-card img {
+        max-width: 300px;
     }
 }
