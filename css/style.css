@@ -572,11 +572,6 @@ section {
     .skill-container {
         grid-template-columns: 1fr;
     }
-    .skill i {
-        top: 0;
-        margin-top: 255px;
-        margin-left: -12px;
-    }
     .projects-box {
         grid-template-columns: 1fr;
     }
@@ -629,11 +624,6 @@ section {
     .hero-content {
         margin-top: 10px;
     }
-    .skill i {
-        top: 0;
-        margin-top: 230px;
-        margin-left: -12px;
-    }
     .projects-card  {
         flex-direction: column;
         padding: 5rem;
@@ -675,17 +665,15 @@ section {
     nav ul.slide {
         transform: translateX(0);
     }
-    .skill i {
-        top: 0;
-        margin-top: 122px;
-        margin-left: -12px;
+    .skill p {
+        font-size: 1.8rem;
     }
     .projects-card  {
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding: 3rem;
-        margin-left: -1.5rem;
+        margin-left: -2rem;
     }
     .projects-card img {
         max-width: 300px;
